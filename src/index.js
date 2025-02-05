@@ -1,3 +1,4 @@
+import './styles.scss';
 import AmoButton from './components/Button/AmoButton.vue';
 
 export { AmoButton };

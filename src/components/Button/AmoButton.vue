@@ -6,7 +6,8 @@
       sizeClasses[size],
       variantClasses[variant],
       { 
-        'opacity-50 cursor-not-allowed pointer-events-none': disabled,
+        'opacity-50 cursor-not-allowed': disabled,
+        'cursor-wait': loading,
         'w-full': block,
       },
       className

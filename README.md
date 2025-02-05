@@ -37,6 +37,7 @@ export default {
 - 🛠 Built with Vue 3 and Vite
 - 🎯 TypeScript support
 - 🎭 Tailwind CSS integration
+- 📚 Comprehensive Storybook documentation
 
 ## Development
 
@@ -49,16 +50,28 @@ npm run dev
 
 # Build for production
 npm run build
+
+# Start Storybook development server
+npm run storybook
+
+# Build Storybook as static app
+npm run build-storybook
 ```
+
+## Documentation
+
+The component documentation is available through Storybook. Run `npm run storybook` to start the Storybook development server and view the interactive documentation, examples, and component playground.
 
 ## Project Structure
 
 ```
 amo-ui/
+├── .storybook/     # Storybook configuration
 ├── dist/           # Built files
 ├── src/
 │   ├── components/ # UI components
-│   └── index.js    # Library entry point
+│   │   └── */     # Each component with its stories
+│   └── index.js   # Library entry point
 ├── vite.config.js  # Vite configuration
 └── package.json
 ```
