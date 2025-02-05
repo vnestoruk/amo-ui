@@ -32,12 +32,13 @@ export default {
 
 ## Features
 
-- 🎨 Modern and clean design
-- 📦 Tree-shakeable components
-- 🛠 Built with Vue 3 and Vite
-- 🎯 TypeScript support
-- 🎭 Tailwind CSS integration
-- 📚 Comprehensive Storybook documentation
+- Modern and clean design
+- Tree-shakeable components
+- Built with Vue 3 and Vite
+- TypeScript support
+- Tailwind CSS integration
+- Comprehensive Storybook documentation
+- Dark mode support
 
 ## Development
 
