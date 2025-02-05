@@ -122,21 +122,19 @@ A versatile button component that supports multiple variants, sizes, and states.
 
 export default meta;
 
-// Base template
-const Template = (args) => ({
-  components: { AmoButton },
-  setup() {
-    return { args };
-  },
-  template: '<AmoButton v-bind="args">{{ args.default || "Button" }}</AmoButton>',
-});
-
 // Default button
-export const Default = Template.bind({});
-Default.args = {
-  variant: 'primary',
-  size: 'md',
-  default: 'Default Button',
+export const Default = {
+  render: () => ({
+    components: { AmoButton },
+    template: '<AmoButton>Default Button</AmoButton>'
+  }),
+  parameters: {
+    docs: {
+      source: {
+        code: '<AmoButton>Default Button</AmoButton>'
+      }
+    }
+  }
 };
 
 // All variants
@@ -153,15 +151,26 @@ export const Variants = {
         <AmoButton variant="success">Success</AmoButton>
         <AmoButton variant="warning">Warning</AmoButton>
       </div>
-    `,
+    `
   }),
   parameters: {
     docs: {
       description: {
         story: 'All available button variants.',
       },
-    },
-  },
+      source: {
+        code: `
+<AmoButton variant="primary">Primary</AmoButton>
+<AmoButton variant="secondary">Secondary</AmoButton>
+<AmoButton variant="outline">Outline</AmoButton>
+<AmoButton variant="ghost">Ghost</AmoButton>
+<AmoButton variant="danger">Danger</AmoButton>
+<AmoButton variant="success">Success</AmoButton>
+<AmoButton variant="warning">Warning</AmoButton>
+`
+      }
+    }
+  }
 };
 
 // All sizes
@@ -174,55 +183,74 @@ export const Sizes = {
         <AmoButton size="md">Medium</AmoButton>
         <AmoButton size="lg">Large</AmoButton>
       </div>
-    `,
+    `
   }),
   parameters: {
     docs: {
       description: {
         story: 'Available button sizes: small (sm), medium (md), and large (lg).',
       },
-    },
-  },
+      source: {
+        code: `
+<AmoButton size="sm">Small</AmoButton>
+<AmoButton size="md">Medium</AmoButton>
+<AmoButton size="lg">Large</AmoButton>
+`
+      }
+    }
+  }
 };
 
 // Loading state
-export const Loading = Template.bind({});
-Loading.args = {
-  loading: true,
-  default: 'Loading Button',
-};
-Loading.parameters = {
-  docs: {
-    description: {
-      story: 'Button in loading state shows a spinner and disables interactions.',
-    },
-  },
+export const Loading = {
+  render: () => ({
+    components: { AmoButton },
+    template: '<AmoButton :loading="true">Loading Button</AmoButton>'
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: 'Button in loading state shows a spinner and disables interactions.',
+      },
+      source: {
+        code: '<AmoButton :loading="true">Loading Button</AmoButton>'
+      }
+    }
+  }
 };
 
 // Disabled state
-export const Disabled = Template.bind({});
-Disabled.args = {
-  disabled: true,
-  default: 'Disabled Button',
-};
-Disabled.parameters = {
-  docs: {
-    description: {
-      story: 'Disabled button state prevents user interaction.',
-    },
-  },
+export const Disabled = {
+  render: () => ({
+    components: { AmoButton },
+    template: '<AmoButton disabled>Disabled Button</AmoButton>'
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: 'Disabled button state prevents user interaction.',
+      },
+      source: {
+        code: '<AmoButton disabled>Disabled Button</AmoButton>'
+      }
+    }
+  }
 };
 
 // Block button
-export const Block = Template.bind({});
-Block.args = {
-  block: true,
-  default: 'Full Width Button',
-};
-Block.parameters = {
-  docs: {
-    description: {
-      story: 'Block buttons span the full width of their container.',
-    },
-  },
+export const Block = {
+  render: () => ({
+    components: { AmoButton },
+    template: '<AmoButton :block="true">Full Width Button</AmoButton>'
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: 'Block buttons span the full width of their container.',
+      },
+      source: {
+        code: '<AmoButton :block="true">Full Width Button</AmoButton>'
+      }
+    }
+  }
 };
