@@ -5,16 +5,14 @@ A modern Vue.js component library designed for building elegant and consistent u
 ## Installation
 
 ```bash
-npm install amo-ui
-# or
-yarn add amo-ui
+npm install @amokit/amo-ui
 ```
 
 ## Usage
 
 ```javascript
 // Import the component you need
-import { AmoButton } from 'amo-ui';
+import { AmoButton } from '@amokit/amo-ui';
 
 // Use it in your Vue component
 export default {
