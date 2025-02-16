@@ -1,6 +1,6 @@
 {
   "name": "@amokit/amo-ui",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A collection of UI components",
   "keywords": [],
   "author": "Vasyl Nestoruk",
@@ -16,6 +16,10 @@
     "build-storybook": "storybook build"
   },
   "license": "ISC",
+  "peerDependencies": {
+    "tailwindcss": "^3.x",
+    "vue": "^3.x"
+  },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
